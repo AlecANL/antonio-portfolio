@@ -63,7 +63,58 @@ button {
 }
 
 .navbar__list {
-  display: none;
+  position: fixed;
+  inset-inline-start: 0;
+  inset-inline-end: 0;
+  inset-block-start: 85px;
+  inset-block-end: 0;
+  padding-block-start: 32px;
+  padding-inline-start: 20px;
+  background-color: var(--soft-black);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+.navbar__list.active {
+  transform: translateX(0);
+  transition: transform 0.3s ease-in-out;
+}
+.navbar__item {
+  margin-block-end: 34px;
+}
+.navbar__item a {
+  font-size: 32px;
+  line-height: 24px;
+  color: var(--just-gray);
+}
+.navbar__item a:active, .navbar__item a:hover {
+  color: var(--dark-orange);
+}
+@media screen and (min-width: 768px) {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .navbar__list {
+    position: initial;
+    display: flex;
+    padding: 0;
+    transform: translateX(0);
+  }
+  .navbar__item {
+    margin-block-end: 0;
+    margin-inline-end: 40px;
+  }
+  .navbar__item a {
+    font-size: 20px;
+    line-height: 32px;
+    color: var(--just-white);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .navbar {
+    inline-size: 90%;
+  }
 }
 
 .icons-box {
@@ -71,30 +122,20 @@ button {
   gap: 8px;
 }
 
-.icon-menu {
-  position: relative;
-  inline-size: 34px;
-  block-size: 34px;
-}
-@media screen and (min-width: 768px) {
-  .icon-menu {
-    display: none;
-  }
-}
-
 .line {
-  margin-block-start: 8px;
+  position: absolute;
+  inset-block-start: 50%;
   inline-size: 100%;
   block-size: 2px;
   background-color: var(--dark-orange);
+  transform: translateY(-50%);
 }
 .line::before {
   content: "";
   position: absolute;
   inline-size: 100%;
   block-size: 2px;
-  inset-block-start: 50%;
-  transform: translateY(-50%);
+  inset-block-start: -8px;
   background-color: var(--dark-orange);
 }
 .line::after {
@@ -102,9 +143,33 @@ button {
   position: absolute;
   inline-size: 100%;
   block-size: 2px;
-  margin-block-end: 8px;
-  inset-block-end: 0;
+  inset-block-end: -8px;
   background-color: var(--dark-orange);
+}
+
+.icon-menu {
+  position: relative;
+  inline-size: 34px;
+  block-size: 34px;
+}
+.icon-menu.active .line:first-child {
+  background-color: transparent;
+}
+.icon-menu.active .line::before {
+  inset-block-start: 0;
+  transform: rotate(45deg);
+}
+.icon-menu.active .line::after {
+  inset-block-end: 0;
+  transform: rotate(-45deg);
+}
+.icon-menu.active .line::before, .icon-menu.active .line::after {
+  transition: transform 0.3s ease-in-out;
+}
+@media screen and (min-width: 768px) {
+  .icon-menu {
+    display: none;
+  }
 }
 
 button span:first-child {
