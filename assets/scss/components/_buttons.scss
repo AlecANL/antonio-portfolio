@@ -1,0 +1,26 @@
+@use '../utils/colors' as c;
+@use '../utils/mixins' as m;
+
+.btn {
+  padding-block: 12px;
+  padding-inline: 24px;
+  border: none;
+  &:active {
+    transform: scale(0.98);
+  }
+  @include m.from(m) {
+    inline-size: 206px;
+  }
+}
+.btn--orange {
+  background-color: var(--dark-orange);
+  color: var(--just-white);
+}
+button.h-button {
+  font-size: 16px;
+  line-height: 24px;
+  @include m.from(m) {
+    display: flex;
+    gap: 8px;
+  }
+}

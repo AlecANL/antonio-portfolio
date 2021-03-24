@@ -1,0 +1,66 @@
+@use '../utils/mixins' as m;
+@use '../utils/colors' as c;
+
+.header {
+  position: fixed;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  inset-inline-end: 0;
+  padding-block: 20px;
+  background-color: var(--soft-black);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-inline: 20px;
+}
+.navbar {
+  &__list {
+    display: none;
+  }
+}
+.icons-box {
+  display: flex;
+  gap: 8px;
+}
+.icon-menu {
+  position: relative;
+  inline-size: 34px;
+  block-size: 34px;
+  @include m.from(m) {
+    display: none;
+  }
+}
+.line {
+  margin-block-start: 8px;
+  inline-size: 100%;
+  block-size: 2px;
+  background-color: var(--dark-orange);
+  &::before {
+    content: '';
+    position: absolute;
+    inline-size: 100%;
+    block-size: 2px;
+    inset-block-start: 50%;
+    transform: translateY(-50%);
+    background-color: var(--dark-orange);
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    inline-size: 100%;
+    block-size: 2px;
+    margin-block-end: 8px;
+    inset-block-end: 0;
+    background-color: var(--dark-orange);
+  }
+}
+
+button span:first-child {
+  display: none;
+  @include m.from(m) {
+    display: block;
+  }
+}

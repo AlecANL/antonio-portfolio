@@ -1,0 +1,33 @@
+@use '../utils/fonts' as f;
+
+h1,
+h2,
+h3,
+h5 {
+  font-family: f.$nunitoFont;
+}
+
+body {
+  font-family: f.$loraFont;
+  margin: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  font-family: inherit;
+}
+
+img {
+  max-inline-size: 100%;
+}
+button {
+  font-family: f.$nunitoFont;
+}
+.wrapper {
+  max-inline-size: 1400px;
+  margin: auto;
+}
