@@ -16,6 +16,11 @@
   background-color: var(--dark-orange);
   color: var(--just-white);
 }
+.btn--transparent {
+  border: 2px solid var(--dark-orange);
+  background-color: transparent;
+  color: var(--dark-orange);
+}
 button.h-button {
   font-size: 16px;
   line-height: 24px;
