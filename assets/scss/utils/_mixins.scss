@@ -14,3 +14,13 @@
 @mixin debug($color) {
   border: 1px solid $color;
 }
+@mixin keyframeSlideUp() {
+  @keyframes slideUp {
+    from {
+      transform: translateY(-10px);
+    }
+    to {
+      transform: translateY(10px);
+    }
+  }
+}
