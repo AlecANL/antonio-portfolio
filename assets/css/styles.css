@@ -226,7 +226,7 @@ button span:first-child {
 }
 @media screen and (min-width: 1366px) {
   .hero-content {
-    padding-block: 110px;
+    padding-block: 111px;
   }
 }
 
@@ -292,7 +292,6 @@ button span:first-child {
 }
 
 .project {
-  border: 1px solid red;
   position: relative;
   margin-block-end: 290px;
 }
@@ -327,26 +326,65 @@ button span:first-child {
   font-size: 16px;
   line-height: 24px;
 }
+@media screen and (min-width: 480px) {
+  .project__image {
+    inline-size: 100%;
+    block-size: 350px;
+  }
+  .project__description {
+    inline-size: 60%;
+  }
+}
 @media screen and (min-width: 1024px) {
   .project {
     block-size: 100%;
+    margin-block-end: 50px;
   }
   .project__image {
     inline-size: 100%;
-    height: 500px;
+    block-size: 500px;
     object-fit: cover;
   }
   .project__description {
-    inline-size: 40%;
-    inset-inline-start: 0;
+    inline-size: 45%;
+    inset-inline-start: -16px;
     inset-inline-end: 0;
     inset-block-start: 50%;
+    padding-block: 80px;
     transform: translateY(-50%);
+  }
+  .project .buttons {
+    display: flex;
+    gap: 16px;
+  }
+  .project .buttons .btn {
+    block-size: 48px;
+  }
+  .project .buttons .btn:nth-child(2) {
+    inline-size: 250px;
+  }
+  .project .buttons .btn:nth-child(1) {
+    inline-size: 140px;
+    order: 1;
+  }
+}
+@media screen and (min-width: 1366px) {
+  .project {
+    block-size: 85%;
+    margin-block-end: 100px;
+  }
+  .project__image {
+    block-size: 500px;
+  }
+  .project:not(:first-child) .project__description {
+    inline-size: 80%;
   }
 }
 
 .projects-content {
   margin-inline: 20px;
+  margin-block-end: 40px;
+  text-align: center;
 }
 .projects-content__heading h4 {
   margin-block: 0;
@@ -356,22 +394,49 @@ button span:first-child {
 }
 .projects-content__heading {
   padding-block: 40px;
+  text-align: initial;
+}
+.projects-content__container {
+  text-align: initial;
+}
+.projects-content .btn {
+  inline-size: 100%;
+}
+@media screen and (min-width: 480px) {
+  .projects-content {
+    padding-inline: 30px;
+  }
+  .projects-content .btn {
+    inline-size: 50%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .projects-content {
+    padding-inline: 90px;
+  }
+  .projects-content__heading {
+    padding-block: 84px;
+  }
 }
 @media screen and (min-width: 1024px) {
-  .projects-content__container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 16px;
+  .projects-content .btn {
+    inline-size: 20%;
   }
   .projects-content__heading {
     display: flex;
-    padding-block: 84px;
   }
   .projects-content__heading h4 {
     font-family: "Nunito", sans-serif;
     font-weight: 700;
     font-size: 48px;
     line-height: 56px;
+  }
+}
+@media screen and (min-width: 1366px) {
+  .projects-content__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 48px;
   }
 }
 
@@ -398,6 +463,11 @@ button span:first-child {
   border: 2px solid var(--dark-orange);
   background-color: transparent;
   color: var(--dark-orange);
+}
+
+.btn--b-black {
+  border-color: var(--just-black);
+  color: var(--just-black);
 }
 
 button.h-button {

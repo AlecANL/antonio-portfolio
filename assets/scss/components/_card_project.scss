@@ -2,7 +2,6 @@
 @use '../utils/colors' as c;
 
 .project {
-  @include m.debug(red);
   position: relative;
   margin-block-end: 290px;
   &:first-child {
@@ -37,20 +36,54 @@
     font-size: 16px;
     line-height: 24px;
   }
-  @include m.from(l) {
-    block-size: 100%;
+  @include m.from(sm) {
     &__image {
       inline-size: 100%;
-      height: 500px;
-      //   block-size: 50%;
+      block-size: 350px;
+    }
+    &__description {
+      inline-size: 60%;
+    }
+  }
+  @include m.from(l) {
+    block-size: 100%;
+    margin-block-end: 50px;
+    &__image {
+      inline-size: 100%;
+      block-size: 500px;
       object-fit: cover;
     }
     &__description {
-      inline-size: 40%;
-      inset-inline-start: 0;
+      inline-size: 45%;
+      inset-inline-start: -16px;
       inset-inline-end: 0;
       inset-block-start: 50%;
+      padding-block: 80px;
       transform: translateY(-50%);
+    }
+    .buttons {
+      display: flex;
+      gap: 16px;
+    }
+    .buttons .btn {
+      block-size: 48px;
+    }
+    .buttons .btn:nth-child(2) {
+      inline-size: 250px;
+    }
+    .buttons .btn:nth-child(1) {
+      inline-size: 140px;
+      order: 1;
+    }
+  }
+  @include m.from(x) {
+    block-size: 85%;
+    margin-block-end: 100px;
+    &__image {
+      block-size: 500px;
+    }
+    &:not(:first-child) &__description {
+      inline-size: 80%;
     }
   }
 }

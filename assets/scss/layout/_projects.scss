@@ -5,6 +5,8 @@
 
 .projects-content {
   margin-inline: 20px;
+  margin-block-end: 40px;
+  text-align: center;
   &__heading h4 {
     margin-block: 0;
     font-size: 32px;
@@ -13,23 +15,46 @@
   }
   &__heading {
     padding-block: 40px;
+    text-align: initial;
   }
-
+  &__container {
+    text-align: initial;
+  }
+  .btn {
+    inline-size: 100%;
+  }
+  @include m.from(sm) {
+    padding-inline: 30px;
+    .btn {
+      inline-size: 50%;
+    }
+  }
+  @include m.from(m) {
+    padding-inline: 90px;
+    &__heading {
+      padding-block: 84px;
+    }
+  }
   @include m.from(l) {
-    &__container {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      column-gap: 16px;
+    .btn {
+      inline-size: 20%;
     }
     &__heading {
       display: flex;
-      padding-block: 84px;
     }
     &__heading h4 {
       font-family: f.$nunitoFont;
       font-weight: 700;
       font-size: 48px;
       line-height: 56px;
+    }
+  }
+
+  @include m.from(x) {
+    &__container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 48px;
     }
   }
 }
