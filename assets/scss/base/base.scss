@@ -19,11 +19,13 @@ ul {
   padding: 0;
   list-style: none;
 }
+
 a {
   text-decoration: none;
   font-family: inherit;
 }
-p {
+p,
+li {
   font-size: 20px;
   line-height: 32px;
 }

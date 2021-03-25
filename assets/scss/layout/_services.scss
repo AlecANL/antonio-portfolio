@@ -1,0 +1,76 @@
+@use '../utils/mixins' as m;
+@use '../utils/fonts' as f;
+
+.services {
+  background: linear-gradient(135deg, #feb692 0%, #ea5455 100%);
+}
+
+.services-content {
+  margin-inline: 20px;
+  padding-block: 40px;
+  h4 {
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 40px;
+    margin-block: 0;
+  }
+  @include m.from(sm) {
+    padding-inline: 30px;
+  }
+  @include m.from(m) {
+    padding-block: 80px;
+    h4 {
+      padding-inline: 60px;
+      font-size: 48px;
+      line-height: 56px;
+      font-family: f.$nunitoFont;
+    }
+  }
+  @include m.from(l) {
+    h4 {
+      padding-inline: 80px;
+    }
+  }
+}
+.services-list {
+  &__column {
+    margin-block-start: 56px;
+  }
+  &__column .btn {
+    inline-size: 100%;
+  }
+  &__column h5 {
+    font-size: 24px;
+    line-height: 32px;
+    margin-block-start: 0;
+    margin-block-end: 16px;
+  }
+  &__column li {
+    margin-block-end: 16px;
+  }
+  @include m.from(m) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 24px;
+    place-items: center;
+
+    &__column {
+      //   align-items: start;
+      align-self: start;
+    }
+    &__column:last-child {
+      grid-column: span 2;
+      justify-self: center;
+    }
+  }
+  @include m.from(l) {
+    grid-template-columns: 1fr 1fr 1fr;
+    &__column:last-child {
+      grid-column: span 1;
+      justify-self: center;
+    }
+  }
+  @include m.from(x) {
+    grid-template-columns: repeat(3, 391px);
+  }
+}
