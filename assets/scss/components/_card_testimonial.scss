@@ -1,0 +1,17 @@
+@use '../utils/colors' as c;
+@use '../utils/mixins' as m;
+
+.testimonial {
+  margin-block: 24px;
+  &__heading {
+    display: flex;
+    gap: 8px;
+  }
+  &__heading span {
+    align-self: center;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--just-coral);
+    line-height: 32px;
+  }
+}

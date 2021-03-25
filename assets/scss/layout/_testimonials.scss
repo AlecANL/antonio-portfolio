@@ -1,0 +1,43 @@
+@forward '../components/card_testimonial';
+@use '../utils/colors' as c;
+@use '../utils/mixins' as m;
+@use '../utils/fonts' as f;
+
+.testimonials {
+  background-color: var(--soft-black);
+  color: var(--just-white);
+}
+.testimonials-content {
+  margin-inline: 20px;
+  padding-block: 40px;
+  h4 {
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 40px;
+    margin-block: 0;
+  }
+  @include m.from(sm) {
+    padding-inline: 30px;
+    padding-block: 60px;
+  }
+  @include m.from(m) {
+    h4 {
+      font-family: f.$nunitoFont;
+      font-size: 48px;
+      line-height: 56px;
+    }
+    &__container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 24px;
+    }
+  }
+  @include m.from(l) {
+    h4 {
+      margin-block-end: 48px;
+    }
+    &__container {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+}
