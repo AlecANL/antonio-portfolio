@@ -579,6 +579,27 @@ button span:first-child {
   }
 }
 
+.hero-image {
+  inline-size: 100%;
+  block-size: 184px;
+  background: url(../images/banner.png) center/cover no-repeat;
+}
+@media screen and (min-width: 480px) {
+  .hero-image {
+    block-size: 200px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero-image {
+    block-size: 300px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .hero-image {
+    block-size: 700px;
+  }
+}
+
 .btn {
   padding-block: 12px;
   padding-inline: 24px;

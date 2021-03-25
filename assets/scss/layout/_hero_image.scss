@@ -1,0 +1,15 @@
+@use '../utils/mixins' as m;
+.hero-image {
+  inline-size: 100%;
+  block-size: 184px;
+  background: url(../images/banner.png) center/cover no-repeat;
+  @include m.from(sm) {
+    block-size: 200px;
+  }
+  @include m.from(m) {
+    block-size: 300px;
+  }
+  @include m.from(l) {
+    block-size: 700px;
+  }
+}
