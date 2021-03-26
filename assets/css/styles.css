@@ -675,6 +675,63 @@ form button.btn {
   font-size: 16px;
 }
 
+.footer {
+  background-color: var(--soft-black);
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  margin-inline: 20px;
+  padding-block: 40px;
+  color: var(--just-white);
+  text-align: center;
+}
+.footer-content p span {
+  display: block;
+}
+.footer-content img {
+  inline-size: 83px;
+  align-self: center;
+}
+.footer-content .feed-social img {
+  inline-size: 32px;
+}
+.footer-content .img-footer,
+.footer-content p span {
+  margin-block-end: 44px;
+}
+.footer-content p:last-child {
+  margin-block-end: 44px;
+}
+@media screen and (min-width: 480px) {
+  .footer-content {
+    padding-inline: 30px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer-content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 56px;
+  }
+  .footer-content .img-footer {
+    margin: 0;
+  }
+  .footer-content p span {
+    margin: 0;
+  }
+  .footer-content .feed-social img {
+    margin-inline-end: 24px;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 1024px) {
+  .footer-content p span {
+    display: inline;
+  }
+}
+
 .btn {
   padding-block: 12px;
   padding-inline: 24px;

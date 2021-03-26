@@ -1,0 +1,54 @@
+@use '../utils/mixins' as m;
+@use '../utils/colors' as c;
+
+.footer {
+  background-color: var(--soft-black);
+}
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  margin-inline: 20px;
+  padding-block: 40px;
+  color: var(--just-white);
+  text-align: center;
+  p span {
+    display: block;
+  }
+  img {
+    inline-size: 83px;
+    align-self: center;
+  }
+  .feed-social img {
+    inline-size: 32px;
+  }
+  .img-footer,
+  p span {
+    margin-block-end: 44px;
+  }
+  p:last-child {
+    margin-block-end: 44px;
+  }
+  @include m.from(sm) {
+    padding-inline: 30px;
+  }
+  @include m.from(m) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 56px;
+    .img-footer {
+      margin: 0;
+    }
+    p span {
+      margin: 0;
+    }
+    .feed-social img {
+      margin-inline-end: 24px;
+    }
+    @include m.from(l) {
+      p span {
+        display: inline;
+      }
+    }
+  }
+}
