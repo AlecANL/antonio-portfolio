@@ -21,6 +21,7 @@
     padding-block: 60px;
   }
   @include m.from(m) {
+    padding-block: 65px;
     h4 {
       font-family: f.$nunitoFont;
       font-size: 48px;

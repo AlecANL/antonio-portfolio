@@ -566,6 +566,9 @@ button span:first-child {
   }
 }
 @media screen and (min-width: 768px) {
+  .testimonials-content {
+    padding-block: 65px;
+  }
   .testimonials-content h4 {
     font-family: "Nunito", sans-serif;
     font-size: 48px;
