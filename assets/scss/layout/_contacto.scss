@@ -18,6 +18,9 @@
     padding-inline: 496px;
     padding-block: 128px;
   }
+  @include m.from(xl) {
+    padding-inline: 600px;
+  }
 }
 .contact-content {
   margin-inline: 20px;

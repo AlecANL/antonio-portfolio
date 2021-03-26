@@ -635,6 +635,11 @@ button span:first-child {
     padding-block: 128px;
   }
 }
+@media screen and (min-width: 1920px) {
+  .contact {
+    padding-inline: 600px;
+  }
+}
 
 .contact-content {
   margin-inline: 20px;
