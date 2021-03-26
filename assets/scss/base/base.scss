@@ -40,3 +40,9 @@ button {
   max-inline-size: 1400px;
   margin: auto;
 }
+input,
+textarea {
+  font-family: f.$loraFont;
+  font-size: 20px;
+  line-height: 32px;
+}

@@ -45,6 +45,13 @@ button {
   margin: auto;
 }
 
+input,
+textarea {
+  font-family: "Lora", serif;
+  font-size: 20px;
+  line-height: 32px;
+}
+
 :root {
   --just-black: #000000;
   --just-coral: #f25f4c;
@@ -579,25 +586,93 @@ button span:first-child {
   }
 }
 
-.hero-image {
+.section-bg-image {
   inline-size: 100%;
   block-size: 184px;
   background: url(../images/banner.png) center/cover no-repeat;
 }
 @media screen and (min-width: 480px) {
-  .hero-image {
+  .section-bg-image {
     block-size: 200px;
   }
 }
 @media screen and (min-width: 768px) {
-  .hero-image {
+  .section-bg-image {
     block-size: 300px;
   }
 }
 @media screen and (min-width: 1024px) {
-  .hero-image {
+  .section-bg-image {
     block-size: 700px;
   }
+}
+
+.contact {
+  background: linear-gradient(135deg, #feb692 0%, #ea5455 100%);
+  padding-block: 40px;
+}
+@media screen and (min-width: 480px) {
+  .contact {
+    padding-inline: 30px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .contact {
+    padding-inline: 100px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .contact {
+    padding-inline: 200px;
+  }
+}
+@media screen and (min-width: 1366px) {
+  .contact {
+    padding-inline: 496px;
+    padding-block: 128px;
+  }
+}
+
+.contact-content {
+  margin-inline: 20px;
+  padding-block: 20px;
+  padding-inline: 20px;
+  background-color: var(--soft-black);
+}
+.contact-content h4 {
+  margin-block: 0;
+  font-size: 32px;
+  font-weight: 400;
+  color: var(--just-white);
+}
+.contact-content p {
+  color: var(--just-gray);
+}
+@media screen and (min-width: 768px) {
+  .contact-content {
+    padding-inline: 48px;
+    padding-block: 48px;
+  }
+  .contact-content h4 {
+    font-family: "Nunito", sans-serif;
+    font-size: 48px;
+    line-height: 56px;
+  }
+}
+
+form .form-group {
+  margin-block-end: 16px;
+}
+form .form-group input,
+form .form-group textarea {
+  inline-size: 100%;
+  padding-block: 12px;
+  padding-inline: 16px;
+  box-sizing: border-box;
+}
+form button.btn {
+  inline-size: 100%;
+  font-size: 16px;
 }
 
 .btn {
